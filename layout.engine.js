@@ -1,7 +1,7 @@
 /*!
 * Layout Engine v0.10.2
 *
-* Copyright (c) 2016 Matt Stow
+* Copyright (c) 2015-2016 Matt Stow
 * http://mattstow.com
 * Licensed under the MIT license
 */
@@ -26,7 +26,7 @@
 
 	// Edge and IE
 	if ('msScrollLimit' in style || 'behavior' in style) {
-		if ('msTextSizeAdjust' in style) {
+		if ('msTextSizeAdjust' in style && !('msFlex' in style)) {
 			cssClass += edge + vendor + edge;
 			jsObject = {
 				vendor: edge
